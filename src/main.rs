@@ -4,10 +4,6 @@ use ratatui::{
 };
 
 fn app_loop(terminal: &mut DefaultTerminal) -> io::Result<()> {
-    loop {
-        // App code for the main loop begins in this place
-    };
-
     Ok(())
 }
 
