@@ -37,26 +37,24 @@ impl App {
                 }
             }
 
-            terminal.draw(|frame| {
-                let b = Block::bordered()
-                    .title(Line::raw("brainrot").bold())
-                    .title_bottom(Line::default().spans(vec![
-                        "quit ".blue(),
-                        "<q>".blue().bold()
-                    ]))
-                    .title_alignment(Alignment::Center);
-                let p = Paragraph::new("welcome to brainrot")
-                    .block(b);
-
-                frame.render_widget(p, frame.area());
-            })?;
+            terminal.draw(|frame| self.render(frame))?;
 
         };
         Ok(())
     }
 
     fn render(&self, frame: &mut Frame) {
+        let b = Block::bordered()
+            .title(Line::raw("brainrot").bold())
+            .title_bottom(Line::default().spans(vec![
+                "quit ".blue(),
+                "<q>".blue().bold(),
+            ]))
+            .title_alignment(Alignment::Center);
+        let p = Paragraph::new("welcome to brainrot")
+            .block(b);
 
+        frame.render_widget(p, frame.area());
     }
 
     fn handle_key_press(&mut self, key: KeyEvent) {
