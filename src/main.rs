@@ -1,6 +1,24 @@
 use std::io;
 use ratatui::{
-    DefaultTerminal, Frame, crossterm::event::{self, Event, KeyCode, KeyEvent}, layout::{ Alignment, Rect }, style::Stylize, symbols::border, text::Line, widgets::{ Block, Borders, Paragraph }
+    DefaultTerminal,
+    Frame,
+    crossterm::event::{
+        self, Event, KeyCode, KeyEvent
+    },
+    layout::{
+        Alignment,
+        Rect
+    },
+    style::Stylize,
+    symbols::border,
+    text::{
+        Line,
+        Text
+    },
+    widgets::{
+        Block,
+        Paragraph
+    },
 };
 
 
